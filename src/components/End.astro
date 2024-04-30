@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets";
+import image from "../Images/Banner/final.png";
+const data = [
+    {image:image,
+    description:"The One where we battled a pandemic and delivered updated systems for a new client"},{
+        image:image,
+    description:"The One where we battled a pandemic and delivered updated systems for a new client"
+    },{
+        image:image,
+    description:"The One where we battled a pandemic and delivered updated systems for a new client"
+    }
+]
+---
+<div class="w-full py-16" style="background-color: #001831;">
+    <div class="lg:px-48 flex justify-center space-y-5 items-center flex-col px-2 ">
+        <h1 class="text-3xl font-semibold text-white">Past Market Validation Projects</h1>
+        <p class="text-center text-white">Entrepreneurs and Intrapreneurs choose Clear Function when they need experts to help them find product market fit.</p>
+        
+        <div class="grid lg:grid-cols-3 gap-x-9 grid-cols-1 gap-y-10 ">
+            {data.map((item, index) => (
+                <div class="relative  ">
+                        <Image src={item.image} alt={item.description} class="w-[80%]" />
+                        <p class="text-sm font-semibold absolute top-10 left-[3%] w-[75%] text-center">{item.description}</p>
+                    </div>
+                     
+               
+            ))}
+        </div>
+    </div>
+</div>

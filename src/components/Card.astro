@@ -1,0 +1,65 @@
+---
+import icon1 from "../Images/Banner/Group 15.svg";
+import { Image } from "astro:assets";
+const data = [
+{
+    id: 1,
+    image: "",
+    title: "Integrated Platform",
+    description:
+      "Single platform for both asset performance and worker safety data, providing a holistic view of operational efficiency and worker well-being.",
+  },
+  {
+    id: 1,
+    image: icon1,
+    title: "Identifying Target Audiences",
+    description:
+      "Single platform for both asset performance and worker safety data, providing a holistic .",
+  },
+  {
+    id: 1,
+    image: icon1,
+    title: "Identifying Target Audiences",
+    description:
+      "Single platform for both asset performance and worker safety data, providing a holistic .",
+  },
+  {
+    id: 1,
+    image: icon1,
+    title: "Identifying Target Audiences",
+    description:
+      "Single platform for both asset performance and worker safety data, providing a holistic.",
+  }
+]
+---
+
+<div class="absolute mt-16"> 
+   <div class="grid grid-cols-4">
+   	{
+		data.map(item=>{
+			return (
+				
+					 <div class=" bg-white rounded-2xl sm:flex sm:text-left lg:block p-5 lg:p-4 lg:w-[90%]  border">
+	              <div class="sm:flex-shrink-0">
+	                <div class="flow-root rounded-lg p-4 lg:p-1">
+	                  <Image src={icon1} alt="icon" />
+	                </div>
+	              </div>
+	              <div class=" sm:ml-6  lg:ml-0 flex flex-col ">
+	                <h3 class="font-bold font-jakarta text-3xl lg:text-2xl  text-custom-gray" style="color: #0B325F;">
+	                  {item.title}
+	                </h3>
+	                <p class="mt-2  text-sm  font-rubik  text-custom-gray1 mb-6">
+	                  {item.description}
+	                </p>
+	              </div>
+	            </div>
+				
+			)
+		})
+	   }
+   </div>
+</div>
+<style>
+	
+</style>

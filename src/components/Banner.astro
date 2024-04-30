@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+import banner from "../Images/Header/banner.png";
+import icon1 from "../Images/Header/Image 2.png";
+import icon2 from "../Images/Header/start-up.png";
+---
+<div class="lg:px-48 flex justify-between w-full pt-48 flex-col lg:flex-row px-2">
+    <div class=" w-full lg:w-[35%]  flex flex-col justify-center ">
+        <h1 class="lg:text-start text-center text-2xl  lg:text-6xl font-semibold mb-4 lg:w-[10%]" style="color: #0B325F;">Market Validation</h1>
+        <p class="mb-4 lg:text-start text-center" style="#0B325F">Market Validation is the process of presenting a concept for a product to its target market and learning from those prospective buyers whether or not the idea is worth pursuing.</p>
+        <button class="lg:w-[35%] w-[25%] mx-auto lg:mx-0 py-3 bg-[#3CB4E5] text-white font-semibold rounded-full hover:bg-red-600 transition duration-300 ease-in-out">Put Us To Work</button>
+    </div>
+    
+  <div class="lg:w-[40%] relative w-full flex justify-end">
+    <Image src={banner} alt="banner" class=" lg:w-[85%]" />
+     
+     <div class="sm:flex-shrink-0 absolute top-[40%] left-[10%] ">
+        <div class="flow-root bg-white w-[6rem] shadow rounded-lg p-4 border-b-[#3CB4E5] border border-b-4">
+            <Image src={icon1} alt="banner" class=""/>
+        </div>
+      </div>
+     <div class="sm:flex-shrink-0 absolute bottom-0 left-[35%]">
+        <div class="flow-root bg-white w-[6rem] shadow rounded-lg p-4 border-b-[#3CB4E5] border border-b-4">
+            <Image src={icon2} alt="banner" class=""/>
+        </div>
+      </div>
+  </div>
+</div>
